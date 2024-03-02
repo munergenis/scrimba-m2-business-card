@@ -1,0 +1,90 @@
+/* 
+
+Dark warm: #780000
+Mid warm: #C1121F
+Light warm: #FDF0D5
+Dark cold: #003049
+Mid cold: #669BBC
+
+ */
+
+:root {
+  --dark-warm: #6C584C;
+  --mid-warm: #A98467;
+  --light-warm: #F0EAD2;
+  --dark-cold: #ADC178;
+  --mid-cold: #DDE5B6;
+}
+
+body {
+  background: linear-gradient(0deg, var(--dark-warm), var(--mid-warm));
+  height: 100vh;
+}
+
+.card {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 500px;
+  margin: auto;
+  margin-top: 100px;
+  padding: 20px 0;
+  
+  background-color: var(--mid-cold);
+  border: 5px solid white;
+  border-radius: 10px;
+}
+
+.img {
+  width: 150px;
+  filter: drop-shadow(0 -5px 30px darkslategray);
+}
+
+.img-background {
+  height: 150px;
+  background: linear-gradient(50deg, var(--dark-warm), var(--light-warm));
+  border: 4px solid white;
+  border-radius: 3px;
+  
+  box-shadow: 5px 2px 5px var(--dark-warm);
+}
+
+.img, .img-background {
+  height: 190px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: Roboto Mono;
+  color: var(--dark-warm);
+}
+
+.text > * {
+  margin: 0;
+}
+
+.text > h1 {
+  font-size: 24px;
+}
+
+.text > h2 {
+  font-size: 18px;
+}
+
+
+
+
+/* DETAILS */
+
+.card {
+  rotate: 1deg;
+  transition: all .30s;
+}
+
+.card:hover {
+  rotate: -2deg;
+  transform: scale(1.05);
+  box-shadow: 10px 5px 20px var(--dark-warm);
+}
